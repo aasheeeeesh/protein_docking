@@ -1,20 +1,52 @@
-# Protein-Ligand Docking and MD Simulation Analysis
-⚙️ A complete end-to-end structural bioinformatics pipeline exploring the DQ2.5 / glia gama5 complex through molecular docking and 10ns MD simulations.
-## Directory Structure
-
-- **Docking Files/**: Contains the files related to the molecular docking process using Autodock Vina.
-  - `Inputs/`: Structural files (PDB and PDBQT) for both the protein and the ligand.
-  - `Outputs/`: Results of the docking process, including `.pdbqt` docked poses, the configured `.txt` grid box, and the Vina result log.
-  - `Visualizations/`: Snapshots and figures illustrating the native interactions and the identified best-docked pose overlay.
+<div align="center">
   
-- **Simulation Files/**: Covers the trajectories and configuration files for the 10 ns MD simulation using GROMACS.
-  - `MD/`: Molecular dynamics pipeline outputs including topology (`.top`), binary run inputs (`.tpr`), coordinate (`.gro`), and trajectory (`.xtc`) files for energy minimization, NVT, NPT, and final production MD stages.
-  - `Logs/`: Detailed `.log` files capturing the status of each simulation step.
+# 🧬 Protein-Ligand Docking & MD Simulation
+**Exploring the DQ2.5 / glia gama5 complex at the nanoscale**
 
-- **`19_assignment2_Report.pdf`**: The comprehensive final report documenting the entire methodology, parameters utilized (like grid box sizing and GROMACS protocols), generated results, and analysis plots.
+[![GROMACS](https://img.shields.io/badge/GROMACS-FF8000?style=for-the-badge&logo=linux&logoColor=white)]()
+[![AutoDock Vina](https://img.shields.io/badge/AutoDock_Vina-0052CC?style=for-the-badge&logo=atom&logoColor=white)]()
+[![PyMOL](https://img.shields.io/badge/PyMOL-20232A?style=for-the-badge&logo=python&logoColor=white)]()
 
-## How to use
+⚙️ *A complete end-to-end structural bioinformatics pipeline featuring molecular docking and a blazing-fast 10 ns MD simulation.*
+</div>
 
-1. The `.txt` files in `Docking Files/Outputs` can be reviewed for raw docking score metrics.
-2. Structure visualizations can be viewed in PyMol or VMD using the corresponding `.pdb` and `.pdbqt` structures in combination with `.xtc` trajectory files. 
-3. The report acts as the main reference for interpreting all simulation and docking outputs.
+---
+
+## 🔬 About the Project
+This repository hosts the computational methodology, raw configuration data, and analysis plots for performing molecular docking and molecular dynamics (MD) on the selected biomolecular target. Whether you are delving into spatial grid configurations or analyzing trajectory fluctuations, everything is here.
+
+<p align="center">
+  <img src="Docking%20Files/Visualizations/docked_best_pose.png" width="45%" alt="Docked Pose" />
+  <img src="Docking%20Files/Visualizations/overlay_screenshot.png" width="45%" alt="Overlay Validation" />
+</p>
+<p align="center"><i>Visualizing the optimal binding pocket interactions.</i></p>
+
+## 📂 Repository Architecture
+
+### 🧩 1. Docking Files (`/Docking Files`)
+We utilized **AutoDock Vina** to compute optimal binding poses and scoring affinities. 
+*   📁 **`Inputs/`**: Pristine PDB and PDBQT configurations for the protein-ligand duo.
+*   📁 **`Outputs/`**: Docking hits! Includes grid box parameter mappings `.txt` and the final pose scores in `.pdbqt` and `.txt` log formats.
+*   🖼️ **`Visualizations/`**: Graphical snapshots illustrating structural overlaps and grid alignments.
+
+### 🌪️ 2. Simulation Files (`/Simulation Files`)
+The complex was subjected to a 10 ns **GROMACS** molecular dynamics run to interrogate stability over time.
+*   📁 **`MD/`**: The core run files. Contains topologies (`.top`), run inputs (`.tpr`), coordinates (`.gro`), and trajectory data (`.xtc`) spanning Energy Minimization, NVT/NPT Equilibration, and Production phases.
+*   📑 **`Logs/`**: Comprehensive simulation log files detailing the progress of each step.
+*   📈 **`Plots/`**: Rendered analysis plots measuring physical stability, including:
+    *   *Root Mean Square Fluctuation (RMSF)*
+    *   *Solvent Accessible Surface Area (SASA)*
+    *   *Density, Temperature, Potential, and Pressure graphs*
+
+### 📄 3. The Research Report
+*   📚 **`19_assignment2_Report.pdf`**: The crown jewel—a meticulously documented report detailing the software tooling, protocol steps, methodology, and comprehensive interpretations of both docking affinities and MD trajectory stability.
+
+---
+
+## 🛠️ How to Dive In
+
+1. **Read the Report:** Start with `19_assignment2_Report.pdf` to gain the full context of the experiment and results.
+2. **Visualize the Data:** Open up the coordinate `.gro` and trajectory `.xtc` files in viewers like **PyMOL**, **VMD**, or **ChimeraX** for an interactive look at the atomic motion.
+3. **Parse the Logs:** Check out the `.txt` outputs in `Docking Files/Outputs/` for raw numerical scoring metrics, or the `.log` files in `Simulation Files/Logs/` for thermodynamic verification.
+
+> *"To understand the function of a biomolecule, one must first grasp its structure."* 🤖
