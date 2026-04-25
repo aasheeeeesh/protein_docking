@@ -1,7 +1,5 @@
 # Protein-Ligand Docking and MD Simulation Analysis
-
-This repository contains the complete assignment regarding the molecular docking and molecular dynamics (MD) simulation for a specified protein-ligand complex (DQ2.5 / glia gama5). 
-
+⚙️ A complete end-to-end structural bioinformatics pipeline exploring the DQ2.5 / glia gama5 complex through molecular docking and 10ns MD simulations.
 ## Directory Structure
 
 - **Docking Files/**: Contains the files related to the molecular docking process using Autodock Vina.
