@@ -1,0 +1,26 @@
+# This file was created Sun Apr 19 06:05:54 2026
+# Created by:
+#           :-) GROMACS - gmx rmsf, 2023.3-Ubuntu_2023.3_1ubuntu3 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/aryan/Downloads/IIITD/BioP/Assignment
+# Command line:
+#   gmx rmsf -s md.tpr -f md_noPBC.xtc -o rmsf.xvg -res
+# gmx rmsf is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+    1   0.0422
+    2   0.0253
+    3   0.0257
+    4   0.0261
+    5   0.0263
+    6   0.0259
+    7   0.0276
+    8   0.0302
+    9   0.0430

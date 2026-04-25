@@ -1,0 +1,15 @@
+# Ignore zip archives
+*.zip
+
+# Ignore specific irrelevant files
+endsem_2025 (1).pdf
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# GROMACS backups and large trajectory files not strictly needed for Git (we keep .xtc as they are compressed)
+#*#
+*.trr
+*.edr
+*.cpt
